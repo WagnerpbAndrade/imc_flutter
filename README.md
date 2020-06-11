@@ -1,6 +1,6 @@
-# imc_flutter
+# Calculadora de IMC usando Flutter.
 
-'A new Flutter project. Created by Slidy'
+Projeto básico para explorar o Flutter e adicionar novas funcionalidades futuras.
 
 ## Getting Started
 

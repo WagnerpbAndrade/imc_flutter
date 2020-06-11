@@ -9,18 +9,18 @@ part of 'home_controller.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$HomeController on _HomeControllerBase, Store {
-  final _$isDarkAtom = Atom(name: '_HomeControllerBase.isDark');
+  final _$resultAtom = Atom(name: '_HomeControllerBase.result');
 
   @override
-  bool get isDark {
-    _$isDarkAtom.reportRead();
-    return super.isDark;
+  double get result {
+    _$resultAtom.reportRead();
+    return super.result;
   }
 
   @override
-  set isDark(bool value) {
-    _$isDarkAtom.reportWrite(value, super.isDark, () {
-      super.isDark = value;
+  set result(double value) {
+    _$resultAtom.reportWrite(value, super.result, () {
+      super.result = value;
     });
   }
 
@@ -28,11 +28,11 @@ mixin _$HomeController on _HomeControllerBase, Store {
       ActionController(name: '_HomeControllerBase');
 
   @override
-  dynamic changeTheme(bool value) {
+  dynamic calculateImc() {
     final _$actionInfo = _$_HomeControllerBaseActionController.startAction(
-        name: '_HomeControllerBase.changeTheme');
+        name: '_HomeControllerBase.calculateImc');
     try {
-      return super.changeTheme(value);
+      return super.calculateImc();
     } finally {
       _$_HomeControllerBaseActionController.endAction(_$actionInfo);
     }
@@ -41,7 +41,7 @@ mixin _$HomeController on _HomeControllerBase, Store {
   @override
   String toString() {
     return '''
-isDark: ${isDark}
+result: ${result}
     ''';
   }
 }

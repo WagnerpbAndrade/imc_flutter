@@ -2,6 +2,7 @@ import 'package:imc_flutter/app/app_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter/material.dart';
 import 'package:imc_flutter/app/app_widget.dart';
+import 'package:imc_flutter/app/core/consts/routers_consts.dart';
 import 'package:imc_flutter/app/modules/home/home_module.dart';
 import 'package:imc_flutter/app/stores/app_theme_store.dart';
 
@@ -21,7 +22,7 @@ class AppModule extends MainModule {
 
   @override
   List<Router> get routers => [
-        Router(Modular.initialRoute, module: HomeModule()),
+        Router(RoutersConst.home, module: HomeModule()),
       ];
 
   @override
